@@ -1,0 +1,14 @@
+# Core dependencies
+pywin32
+cryptography
+pynput
+pyperclip
+opencv-python
+pillow
+requests
+python-crontab
+keyring
+# For GUI (future)
+pyqt5
+# For Linux only features
+psutil 
